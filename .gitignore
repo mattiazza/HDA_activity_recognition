@@ -163,3 +163,5 @@ cython_debug/
 # Tolgo tutti i file .mat e .h5
 **/*.mat 
 *.h5
+*.txt
+*.crdownload
