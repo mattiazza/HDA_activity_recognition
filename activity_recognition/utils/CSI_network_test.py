@@ -142,11 +142,11 @@ if __name__ == "__main__":
     lab_complete, count_complete = np.unique(
         labels_complete_selected_expanded, return_counts=True
     )
-    complete_steps_per_epoch = int(np.ceil(num_samples_complete / batch_size))
+    complete_steps_per_epoch = int(np.ceil(num_samples_complete / batch_size))  # ()
 
     # complete
     complete_labels_true = np.array(labels_complete_selected_expanded)
-    complete_prediction_list = csi_model.predict(
+    complete_prediction_list = csi_model.predict( 
         dataset_csi_complete, steps=complete_steps_per_epoch
     )[: complete_labels_true.shape[0]]
 

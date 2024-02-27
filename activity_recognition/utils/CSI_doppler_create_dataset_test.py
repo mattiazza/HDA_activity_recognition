@@ -56,7 +56,7 @@ if __name__ == '__main__':
         paths = [path_train, path_val, path_test]
         for pat in paths:
             if os.path.exists(pat):
-                shutil.rmtree(pat)
+                shutil.rmtree(pat) 
 
         path_complete = exp_dir + 'complete_antennas_' + str(activities)
         if os.path.exists(path_complete):
@@ -92,7 +92,7 @@ if __name__ == '__main__':
                 labels.append(label)
                 csi_matrix = []
 
-            label = name[4]
+            label = name[4] 
 
             if label not in csi_label_dict:
                 processed = False
