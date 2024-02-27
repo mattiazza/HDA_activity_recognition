@@ -189,12 +189,12 @@ def plt_confusion_matrix(number_activities, confusion_matrix, activities, name):
     im1 = ax.pcolor(np.linspace(0.5, number_activities + 0.5, number_activities + 1),
                     np.linspace(0.5, number_activities + 0.5, number_activities + 1),
                     confusion_matrix_normaliz_row, cmap='Blues', edgecolors='black', vmin=0, vmax=1)
-    ax.set_xlabel('Actual activity', FontSize=18)
+    ax.set_xlabel('Actual activity', fontsize=18)
     ax.set_xticks(np.linspace(1, number_activities, number_activities))
-    ax.set_xticklabels(labels=activities, FontSize=18)
+    ax.set_xticklabels(labels=activities, fontsize=18)
     ax.set_yticks(np.linspace(1, number_activities, number_activities))
-    ax.set_yticklabels(labels=activities, FontSize=18, rotation=45)
-    ax.set_ylabel('Predicted activity', FontSize=18)
+    ax.set_yticklabels(labels=activities, fontsize=18, rotation=45)
+    ax.set_ylabel('Predicted activity', fontsize=18)
 
     for x_ax in range(confusion_matrix_normaliz_row.shape[0]):
         for y_ax in range(confusion_matrix_normaliz_row.shape[1]):
@@ -208,10 +208,10 @@ def plt_confusion_matrix(number_activities, confusion_matrix, activities, name):
 
     cbar_ax = fig.add_axes([0.83, 0.15, 0.03, 0.8])
     cbar = fig.colorbar(im1, cax=cbar_ax)
-    cbar.ax.set_ylabel('Accuracy', FontSize=18)
+    cbar.ax.set_ylabel('Accuracy', fontsize=18)
     cbar.ax.tick_params(axis="y", labelsize=16)
 
-    plt.tight_layout()
+    #plt.tight_layout()
     name_fig = './plots/cm_' + name + '.pdf'
     plt.savefig(name_fig)
 

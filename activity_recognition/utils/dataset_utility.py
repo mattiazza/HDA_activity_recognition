@@ -65,7 +65,7 @@ def load_data(csi_file_t):
     csi_file = csi_file_t
     if isinstance(csi_file_t, (bytes, bytearray)):
         csi_file = csi_file.decode()
-    matrix_csi = tf.transpose(matrix_csi, perm=[2, 1, 0])
+    matrix_csi = tf.transpose(csi_file, perm=[2, 1, 0])
     matrix_csi = tf.cast(matrix_csi, tf.float32)
     return matrix_csi
 
